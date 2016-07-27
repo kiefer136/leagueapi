@@ -6,15 +6,20 @@ body {
 header {
   border: 2px solid black;  
   background-color: black;
-  width: 50%;
   height: 25em;
-  margin: 0 auto;
   padding-bottom: 25px;
+}
+#headbord {
+  background-color: gold;
+  padding: 10px;
+  width: 55%;
+  margin: 0 auto;
 }
 #sumID{
   border: 2px solid gold;
   text-align: center;
   margin: 15px;
+  height: 5%;
 }
 #message {
   padding-top: 15px;
@@ -34,6 +39,20 @@ header {
 }
 #subbutt:hover {
   background-color: red;
-  transition: 2s;
+  transition: 1s;
   font-size: 25px;
 }
+#feeddef {
+  max-width: 50%;
+  float:right; 
+  padding-right: 10px;
+}
+.feedic {
+  display: inline;
+  float: right;
+  padding-right: 20px;
+}
+.feedic:hover {
+  width: 5%;
+}
+

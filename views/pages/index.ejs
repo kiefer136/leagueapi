@@ -7,18 +7,23 @@
   <script src="/javascript/league.js"></script>
 </head>
 <body> 
-  <header>  
-    <h1>Welcome to the League of Legends feeder page </h1>
-    <p>Search a summoner name to find out if they are a feeder or not</p>
-    <br><p><small>FEEDING = INTENTIONALLY SACRIFICING ONES SELF TO THE OPPOSING TEAM TO INCREASE THEIR GOLD AND XP GAINED, ALLOWING THEM TO BECOME STRONGER QUICKER</small></p>
-    <br/>
-    <input type="text" id="sumID">
-    <br>
-    <input id="subbutt" type="submit" value="Feeds?"" onclick="summonerLookUp();"/>
-    <br/>
-    <div id="message"></div>
-    <br>
-    <div id="message2"></div>
-  </header>
+  <div id='headbord'>
+    <header>  
+      <h1>Welcome to the League of Legends feeder page </h1>
+
+      <p>Search a summoner name to find out if they are a feeder or not</p>
+      <br/>
+      <input type="text" id="sumID">
+      <br>
+      <input id="subbutt" type="submit" value="Feeds?"" onclick="summonerLookUp();"/>
+      <br/>
+      <div id="message"></div>
+      <br>
+      <div id="message2"></div>
+      <img src='/img/teemo.png' class="feedic">
+      <p id="feeddef">What is a feeder?</p>
+      <br>
+    </header>
+  </div>
 </body>
 </html>

@@ -1,15 +1,11 @@
 function summonerLookUp() {
-
     var API_KEY = "5ede9a21-a9b5-48d4-83c1-b17aa201ac1e";
     var SUMMONER_NAME = $('#sumID').val().toLowerCase();
-
     $.ajax({
         url: 'https://na.api.pvp.net/api/lol/NA/v1.4/summoner/by-name/' + SUMMONER_NAME + '?api_key=' + API_KEY,
         type: 'GET',
         dataType: 'json',
-        data: {
-
-        },
+        data: {},
         success: function (json) {
             var obj = json[SUMMONER_NAME];
             var SUMMONER_ID = obj.id;
@@ -17,11 +13,8 @@ function summonerLookUp() {
                 url: 'https://na.api.pvp.net/api/lol/NA/v1.3/game/by-summoner/' + SUMMONER_ID + '/recent' + '?api_key=' + API_KEY,
                 type: 'GET',
                 dataType: 'json',
-                data: {
-
-                },
+                data: {},
                 success: function (json) {
-                    console.log(json)
                     var recent = json.games 
                     var wins = 0;
                     var loss = 0;
@@ -40,18 +33,24 @@ function summonerLookUp() {
                         $('#message').html('<strong>'+SUMMONER_NAME+'</strong>' + ' is a feeder');
                         $('#message2').html('has <strong>Lost</strong> '+loss+' out of past 10 games');
                     }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    $('#message').html('Invalid summoner name');
+                    $('#message2').html('');
                 }
             });
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
             $('#message').html('Invalid summoner ID');
+            $('#message2').html('');
         }
     });
 };
 $(function() {
-    $('#subbutt').on('click', function() {
-        console.log('hi')
-    });
+    $('.feedic').on('mouseenter', function() {
+        $('#feeddef').html('FEEDING = INTENTIONALLY SACRIFICING ONES SELF TO THE OPPOSING TEAM TO INCREASE THEIR GOLD AND XP GAINED, ALLOWING THEM TO BECOME STRONGER QUICKER');
+    })
+    $('.feedic').on('mouseleave', function() {
+        $('#feeddef').html('What is a feeder?')
+    })
 });
-
-
