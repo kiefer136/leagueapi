@@ -21,6 +21,7 @@ function summonerLookUp() {
 
                 },
                 success: function (json) {
+                    console.log(json)
                     var recent = json.games 
                     var wins = 0;
                     var loss = 0;
