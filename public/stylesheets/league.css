@@ -1,18 +1,43 @@
 body {
   text-align: center;
-  background-image: url("http://orig00.deviantart.net/4caa/f/2013/012/1/c/teemo_business_card_by_dasqui-d5r9mbn.png");
+  background-image: url("/img/background.jpg");
   color: white;
+  margin: 0px;
 }
 header {
+  background-color: black;
+  border: 5px solid black;
+  border-bottom-color: gold;
+  height: 80px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+header span {
+  margin-left: 25px;
+  border: 2px solid gold;
+  background-color: green;
+  padding: 15px;
+}
+header span:hover {
+  padding-bottom: 25px;
+}
+#top {
+  background-color: #3c3a3a;
+  height: 15px;
+  position: relative;
+}
+#mainhead {
   border: 2px solid black;  
+  border-radius: 5%;
   background-color: black;
   height: 25em;
   padding-bottom: 25px;
 }
 #headbord {
   background-color: gold;
-  padding: 10px;
-  width: 55%;
+  border-radius: 5%;
+  padding: 5px;
+  width: 60%;
   margin: 0 auto;
 }
 #sumID{
@@ -31,8 +56,8 @@ header {
 #subbutt {
   background-color: green;
   border: 2px solid black;
-  border-radius: 50%;
-  padding:15px;
+  border-radius: 20%;
+  padding:10px;
   color:white;
   font-family: sans-serif;
   font-size: 20px;
@@ -55,4 +80,9 @@ header {
 .feedic:hover {
   width: 5%;
 }
-
+#defbox {
+  border: solid 5px gold;
+  border-radius: 5%;
+  background-color: #09149a;
+  padding: 5px;
+}

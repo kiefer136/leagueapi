@@ -2,15 +2,25 @@
 <html>
 <head>
   <title>League of Feeders</title>
+  <!-- Main css  -->
   <link rel="stylesheet" href="/stylesheets/league.css">
+  <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <!-- Riot Games api functions -->
   <script src="/javascript/league.js"></script>
+
 </head>
 <body> 
-  <div id='headbord'>
-    <header>  
-      <h1>Welcome to the League of Legends feeder page </h1>
+  <div id="top"></div>
+  <header>
+    <span>Home</span>
+    <span>Rankings</span>
+    <span>Feeders</span>
+  </header>
 
+  <div id='headbord'>
+    <div id="mainhead">  
+      <h1>Welcome to the League of Legends feeder page </h1>
       <p>Search a summoner name to find out if they are a feeder or not</p>
       <br/>
       <input type="text" id="sumID">
@@ -23,7 +33,7 @@
       <img src='/img/teemo.png' class="feedic">
       <p id="feeddef">What is a feeder?</p>
       <br>
-    </header>
+    </div>
   </div>
 </body>
 </html>

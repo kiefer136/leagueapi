@@ -48,7 +48,7 @@ function summonerLookUp() {
 };
 $(function() {
     $('.feedic').on('mouseenter', function() {
-        $('#feeddef').html('FEEDING = INTENTIONALLY SACRIFICING ONES SELF TO THE OPPOSING TEAM TO INCREASE THEIR GOLD AND XP GAINED, ALLOWING THEM TO BECOME STRONGER QUICKER');
+        $('#feeddef').html('<div id="defbox">FEEDING = INTENTIONALLY SACRIFICING ONES SELF TO THE OPPOSING TEAM TO INCREASE THEIR GOLD AND XP GAINED, ALLOWING THEM TO BECOME STRONGER QUICKER</div>');
     })
     $('.feedic').on('mouseleave', function() {
         $('#feeddef').html('What is a feeder?')
