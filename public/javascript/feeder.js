@@ -53,4 +53,10 @@ $(function() {
     $('.feedic').on('mouseleave', function() {
         $('#feeddef').html('What is a feeder?')
     })
+    $("input").keypress(function(event) {
+    	if (event.which == 13) {
+       	 event.preventDefault();
+       	 $("#subbutt").submit();
+    	}
+	});
 });
