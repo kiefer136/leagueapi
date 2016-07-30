@@ -1,6 +1,7 @@
 function summonerLookUp() {
     var API_KEY = "5ede9a21-a9b5-48d4-83c1-b17aa201ac1e";
     var SUMMONER_NAME = $('#sumID').val().toLowerCase();
+    SUMMONER_NAME.replace(/\s/g, '');
     $.ajax({
         url: 'https://na.api.pvp.net/api/lol/NA/v1.4/summoner/by-name/' + SUMMONER_NAME + '?api_key=' + API_KEY,
         type: 'GET',

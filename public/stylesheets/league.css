@@ -4,6 +4,10 @@ body {
   color: white;
   margin: 0px;
 }
+a {
+  color: white;
+  text-decoration: none;
+}
 header {
   background-color: black;
   border: 5px solid black;
@@ -86,4 +90,21 @@ header span:hover {
   border-radius: 5%;
   background-color: #09149a;
   padding: 5px;
+}
+#sum1 {
+  border: 2px solid green;
+  width: 25%;
+  height: 85%;
+  float: left;
+  margin-left: 15%;
+  margin-top: 3%;
+}
+
+#sum2 {
+  border: 2px solid green;
+  width: 25%;
+  height: 85%;
+  float: right;
+  margin-right: 15%;
+  margin-top: 3%;
 }
