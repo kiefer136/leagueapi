@@ -1,7 +1,7 @@
 function summonerLookUp() {
     var API_KEY = "5ede9a21-a9b5-48d4-83c1-b17aa201ac1e";
-    var SUMMONER_NAME = $('#sumID').val().toLowerCase();
-    SUMMONER_NAME.replace(/\s/g, '');
+    var raw_summoner_name = $('#sumID').val();
+    var SUMMONER_NAME = $('#sumID').val().toLowerCase().replace(/\s/g, '');
     $.ajax({
         url: 'https://na.api.pvp.net/api/lol/NA/v1.4/summoner/by-name/' + SUMMONER_NAME + '?api_key=' + API_KEY,
         type: 'GET',
@@ -28,10 +28,10 @@ function summonerLookUp() {
                         }
                     }
                     if (wins >= 6) {
-                        $('#message').html('<strong>'+SUMMONER_NAME+'</strong>' + ' is not a feeder');
+                        $('#message').html('<strong>'+raw_summoner_name+'</strong>' + ' is not a feeder');
                         $('#message2').html('has <strong>Won</strong> '+wins+' out of 10 past games');
                     } else {
-                        $('#message').html('<strong>'+SUMMONER_NAME+'</strong>' + ' is a feeder');
+                        $('#message').html('<strong>'+raw_summoner_name+'</strong>' + ' is a feeder');
                         $('#message2').html('has <strong>Lost</strong> '+loss+' out of past 10 games');
                     }
                 },
@@ -54,4 +54,10 @@ $(function() {
     $('.feedic').on('mouseleave', function() {
         $('#feeddef').html('What is a feeder?')
     })
+    $("#sumID").keypress(function(event) {
+    	if (event.which == 13) {
+       	 event.preventDefault();
+       	 summonerLookUp();
+    	}
+	});
 });
