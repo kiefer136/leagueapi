@@ -9,6 +9,7 @@ function summonerLookUp() {
         data: {},
         success: function (json) {
             var obj = json[SUMMONER_NAME];
+            var sumico = obj.profileIconId
             var SUMMONER_ID = obj.id;
             $.ajax({
                 url: 'https://na.api.pvp.net/api/lol/NA/v1.3/game/by-summoner/' + SUMMONER_ID + '/recent' + '?api_key=' + API_KEY,
@@ -34,6 +35,8 @@ function summonerLookUp() {
                         $('#message').html('<strong>'+raw_summoner_name+'</strong>' + ' is a feeder');
                         $('#message2').html('has <strong>Lost</strong> '+loss+' out of past 10 games');
                     }
+                    $('#message').prepend('<img src="http://ddragon.leagueoflegends.com/cdn/6.15.1/img/profileicon/'+ sumico +'.png">')
+
                 },
                 error: function (XMLHttpRequest, textStatus, errorThrown) {
                     $('#message').html('Invalid summoner name');

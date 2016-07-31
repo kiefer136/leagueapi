@@ -55,6 +55,10 @@ header span:hover {
   padding-top: 15px;
   font-size: 25px;
 }
+#message img {
+  height: 50px;
+  padding-right: 15px;
+}
 #message2 {
   font-size: 20px;
 }
@@ -108,4 +112,5 @@ header span:hover {
   margin-right: 15%;
   margin-top: 3%;
 }
+
 
