@@ -35,7 +35,7 @@ header span:hover {
   border: 2px solid black;  
   border-radius: 5%;
   background-color: black;
-  height: 25em;
+  height: 450px;
   padding-bottom: 25px;
 }
 #headbord {
@@ -80,6 +80,7 @@ header span:hover {
   max-width: 50%;
   float:right; 
   padding-right: 10px;
+  font-size: 1.2em;
 }
 .feedic {
   display: inline;
@@ -95,22 +96,10 @@ header span:hover {
   background-color: #09149a;
   padding: 5px;
 }
-#sum1 {
-  border: 2px solid green;
-  width: 25%;
-  height: 85%;
-  float: left;
-  margin-left: 15%;
-  margin-top: 3%;
-}
 
-#sum2 {
-  border: 2px solid green;
-  width: 25%;
+.rankplayer {
+  width: 15%;
   height: 85%;
-  float: right;
-  margin-right: 15%;
-  margin-top: 3%;
+  display: inline-block;
 }
-
 

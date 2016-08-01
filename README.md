@@ -5,4 +5,4 @@ RiotGames API for League of Legends data
 
 -----------------------------
 
-Search your summoner name or your friends to find out whos the feeder! 
+Search your summoner name or your friends summoner to find out who is the worst! 
