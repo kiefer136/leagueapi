@@ -43,7 +43,26 @@ function summonerLookUp() {
                     $('#message2').html('');
                 }
             });
+            $.ajax({
+                url: 'https://na.api.pvp.net/api/lol/NA/v1.3/stats/by-summoner/'+SUMMONER_ID+'/summary'+ '?api_key=' + API_KEY,
+                type: 'GET',
+                dataType: 'json',
+                data: {},
+                success: function (json) {
+                    var randkedSolo = json.playerStatSummaries
+                    console.log(json)
+                    var loss = randkedSolo.losses;
+                    var win = randkedSolo.wins;
+
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    console.log('derp')
+                }
+            });
         },
+        
+
+
         error: function (XMLHttpRequest, textStatus, errorThrown) {
             $('#message').html('Invalid summoner ID');
             $('#message2').html('');

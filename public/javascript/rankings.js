@@ -49,11 +49,11 @@ $(function() {
           var div3 = json[sum3id][0].entries[0].division;
           var div4 = json[sum4id][0].entries[0].division;
           var div5 = json[sum5id][0].entries[0].division;
-          $('#sum1icon p').html(tier1+ ' ' +div1)
-          $('#sum2icon p').html(tier2+ ' ' +div2)
-          $('#sum3icon p').html(tier3+ ' ' +div3)
-          $('#sum4icon p').html(tier4+ ' ' +div4)
-          $('#sum5icon p').html(tier5+ ' ' +div5)
+          $('#sum1icon p').html(tier1+ ' ' +div1+'<img src="img/'+tier1.toLowerCase()+'.png">')
+          $('#sum2icon p').html(tier2+ ' ' +div2+'<img src="img/'+tier2.toLowerCase()+'.png">')
+          $('#sum3icon p').html(tier3+ ' ' +div3+'<img src="img/'+tier3.toLowerCase()+'.png">')
+          $('#sum4icon p').html(tier4+ ' ' +div4+'<img src="img/'+tier4.toLowerCase()+'.png">')
+          $('#sum5icon p').html(tier5+ ' ' +div5+'<img src="img/'+tier5.toLowerCase()+'.png">')
 
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
